@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Sender Details -->
+    <TextView
+        android:id="@+id/textSenderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sender Name:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textSenderEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sender Email:"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageSender"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Sender Image"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Receiver Details -->
+    <TextView
+        android:id="@+id/textReceiverName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receiver Name:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textReceiverEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receiver Email:"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageReceiver"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Receiver Image"
+        android:scaleType="centerCrop" />
+
+</LinearLayout>

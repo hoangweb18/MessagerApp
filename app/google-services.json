@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631902265935",
+    "project_id": "messageapp-f8837",
+    "storage_bucket": "messageapp-f8837.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631902265935:android:5c91776cd03c5c6688403a",
+        "android_client_info": {
+          "package_name": "com.example.messagerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0opQ4eHI7HKuKK6YSIMikfEshaJZbaxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRecordAudio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/input_background"
+    android:padding="16dp">
+
+    <!-- Thanh ghi âm -->
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@color/primary_dark"
+        android:visibility="gone" />
+
+    <!-- Nút ghi âm -->
+    <ImageButton
+        android:id="@+id/buttonStartRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_mic_24_white"
+        android:contentDescription="Ghi âm"
+        android:background="@color/primary"
+        android:layout_gravity="center"
+        android:padding="16dp" />
+
+    <!-- Các nút điều khiển -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="@color/input_background">
+
+        <!-- Nút dừng ghi âm -->
+        <ImageButton
+            android:id="@+id/buttonStopRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stop_circle_24dp_000000"
+            android:contentDescription="Dừng"
+            android:layout_margin="8dp"
+            android:visibility="gone" />
+
+        <!-- Nút xóa ghi âm -->
+        <ImageButton
+            android:id="@+id/buttonDeleteRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_24dp_000000"
+            android:contentDescription="Xóa"
+            android:layout_margin="8dp"
+            android:visibility="gone" />
+
+        <!-- Nút gửi tin nhắn thoại -->
+        <ImageButton
+            android:id="@+id/buttonSendVoiceMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Gửi"
+            android:layout_margin="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

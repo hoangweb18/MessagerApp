@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_4sdp">
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_sent_message"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layout_constraintWidth_max="wrap"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/audioControlsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/background_sent_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textMessage"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/buttonPlayPauseAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_arrow_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Play/Pause"
+            android:layout_marginEnd="@dimen/_1sdp"/>
+
+        <SeekBar
+            android:id="@+id/seekBarAudio"
+            android:layout_width="150dp"
+            android:layout_weight="100"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:thumbTint="@android:color/white"
+            android:progressBackgroundTint="@color/white"
+            android:max="100"/>
+
+        <TextView
+            android:id="@+id/textAudioTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:text="00:00"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+    </LinearLayout>
+
+
+    <VideoView
+        android:id="@+id/videoAttachment"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:contentDescription="Video thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audioControlsLayout"
+        app:layout_constraintWidth_percent="0.8"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:id="@+id/buttonPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Play/Pause"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="@id/videoAttachment"
+        app:layout_constraintBottom_toBottomOf="@id/videoAttachment"
+        app:layout_constraintEnd_toEndOf="@id/videoAttachment"
+        app:layout_constraintStart_toStartOf="@id/videoAttachment"
+        android:visibility="gone"/>
+
+
+    <ImageButton
+        android:id="@+id/buttonFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_fullscreen_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Full Screen"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/videoAttachment"
+        app:layout_constraintEnd_toEndOf="@id/videoAttachment" />
+
+    <ImageView
+        android:id="@+id/imageAttachment"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/background_sent_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/videoAttachment"
+        app:layout_constraintWidth_percent="0.8"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/fileAttachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:background="@drawable/background_sent_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAttachment"
+        app:layout_constraintWidth_percent="0.8"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_attach_file_24"
+            android:contentDescription="File attach" />
+
+        <TextView
+            android:id="@+id/textFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:text="File name"
+            app:layout_constraintWidth_percent="0.8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fileAttachment"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/iconPickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_insert_emoticon_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Chọn biểu tượng"
+        android:layout_marginStart="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="@id/textDateTime"
+        app:layout_constraintBottom_toBottomOf="@id/textDateTime"
+        app:layout_constraintEnd_toStartOf="@id/textDateTime" />
+
+    <TextView
+        android:id="@+id/imageLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:text="❤️"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="@id/textDateTime"/>
+
+    <TextView
+        android:id="@+id/extendImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="end"
+        android:background="@drawable/baseline_extend"
+        android:textColor="@color/primary_dark"
+        app:layout_constraintTop_toTopOf="@id/imageAttachment"
+        app:layout_constraintBottom_toBottomOf="@id/imageAttachment"
+        app:layout_constraintEnd_toStartOf="@id/imageAttachment"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

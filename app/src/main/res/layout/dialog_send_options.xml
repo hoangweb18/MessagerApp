@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/primary"
+        android:elevation="8dp"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@color/primary">
+
+            <ImageButton
+                android:id="@+id/buttonAttachFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:src="@drawable/baseline_attach_file_24_black"
+                android:contentDescription="Đính kèm file"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/buttonSendVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:src="@drawable/icon_video"
+                android:contentDescription="Gửi Video"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/buttonSendImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:src="@drawable/baseline_image_24"
+                android:contentDescription="Gửi ảnh"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/buttonRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:src="@drawable/baseline_mic_24"
+                android:contentDescription="Gửi ảnh"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

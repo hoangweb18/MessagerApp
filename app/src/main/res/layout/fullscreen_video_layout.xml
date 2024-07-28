@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/input_background">
+
+    <VideoView
+        android:id="@+id/fullscreenVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:contentDescription="Fullscreen video view" />
+
+    <ImageButton
+        android:id="@+id/buttonCloseFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        android:contentDescription="Close fullscreen" />
+
+    <ImageButton
+        android:id="@+id/buttonDownloadVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_download"
+        android:contentDescription="Download video" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        android:background="@color/primary">
+
+        <ImageButton
+            android:id="@+id/buttonPlayPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play_arrow_48"
+            android:contentDescription="Play/Pause video"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <SeekBar
+            android:id="@+id/videoSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="48sp"
+            android:layout_weight="5"
+            android:max="100"
+            android:progress="0"
+            android:thumbTint="@android:color/white"
+            android:progressTint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textVideoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="00:00"
+            android:textSize="@dimen/_15sdp"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:id="@+id/buttonVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/volume_up_24dp_000000"
+            android:contentDescription="Toggle volume"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+
+    </LinearLayout>
+</FrameLayout>
